@@ -95,7 +95,26 @@ def main():
 
     else:
         print("See you next time!")
-
+# --------------------------------------------------
+def test_key():
+    """Test key"""
+    
+    assert main()
+    answer = input("Would you like to determine an unknown bacteria? (yes/no)")
+    if answer.lower().strip() == "yes" or "y":
+        answer = input("Is your bacteria Gram positive or Gram negative? (positive/negative)")
+        if answer.lower().strip() == "positive" or "+" or "p":
+            answer = input("What is the morphology of your bacteria? (Bacilli/Cocci)")
+            if answer.lower().strip() == "bacilli" or "b":
+                answer = input("Your bacteria could be 1 of 8 in this key. What is the result of your catalase test? (positive/negative)")
+                if answer.lower().strip() == "positive" or "+" or "p":
+                    answer = input("Your bacteria could be 1 of 6 in this key. What is the result of your SBA? (alpha/gamma/double halo)")
+                    if answer.lower().strip() == "alpha" or "gamma" or "a" or "g":
+                        answer = input("Your bacteria could be 1 of 4 in this key. What is the result of your urease test? (positive/negative)")
+                        if answer.lower().strip() == "positive" or "+" or "p":
+                            answer = input("Your bacteria could be 1 of 2 bacteria in this key. What is the result of your CAMP test? (positive/negative)")
+                            if answer.lower().strip() == "positive" or "+" or "p":
+                                answer = input("Your bacteria is Corynebacterium pseudotuberculosis!")
 
 # --------------------------------------------------
 if __name__ == '__main__':
